@@ -39,7 +39,6 @@ public class Station {
 
 
 	public String toString(){
-		StringBuffer buffer = new StringBuffer();
 		String s = "Id: " + id + "\n" +
 		"Name: " + name + "\n" +
 		"Address: " + address + "\n" +
@@ -49,19 +48,6 @@ public class Station {
 		"Price: " + price + "\n";
 		
 		return s;
-		/*
-		StringBuffer buffer = new StringBuffer();
-		buffer.append("Id: " + id + "\n");
-		buffer.append("Name: " + name + "\n");
-		buffer.append("Address: " + address + "\n");
-		buffer.append("Number of Contractual Employees: " + numberOfContractuals + "\n");
-		buffer.append("Number of Subcontractor Employees: " + numberOfSubcontractors + "\n");
-		buffer.append("Number of Tickets Sold " + numberOfSoldTickets + "\n");
-		buffer.append("Price: " + price + "\n");
-		String birlestirilmis = buffer.toString();
-		return birlestirilmis;
-		
-		*/
 		
 	}
 	

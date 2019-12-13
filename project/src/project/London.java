@@ -157,7 +157,7 @@ public class London {
 			}
 		}
 		if( stationLowestProfit == null ){
-			return "There is no station to close!";
+			return "There is no station to close!\n";
 		}
 		for(int i=0; i < s.length; i++){ // It finds station which has the lowest profit.
 			if( stationLowestProfit.situation == true && s[i].situation == true ){ // If station is active, control it.

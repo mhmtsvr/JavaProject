@@ -50,7 +50,7 @@ public class main {
 			stations[i].calculateIncomeCost(); // Calculation method for station
 
 		}
-		
+		System.out.println("-------------------------------\n\n");
 		System.out.println(numberOfStations + " stations entered to system.\n");
 		System.out.println("Transactions you can take are listed:\n"
 				+ "1-\t List all open stations\n"
@@ -65,6 +65,8 @@ public class main {
 			switch(selection){
 			case 1 :
 			{	// Loop code for listing all active stations
+				System.out.println("-------------------------------\n\n");
+				
 				for(int i=0; i<numberOfStations; i++){
 					if( stations[i].situation == true){
 						System.out.println(stations[i].toString() );
@@ -74,8 +76,11 @@ public class main {
 			}
 			case 2 :
 			{
+				System.out.println("-------------------------------\n\n");
+				
 				total_Income = company.total_Income(stations);
 				total_Cost = company.total_Cost(stations);
+				
 				System.out.println("Annual Calculations of Company\n" + 
 						"# # # # # # # # # # # # # # # # # # # # # # #");
 				System.out.println("Monthly Income:\t" + total_Income + "£" );
@@ -88,24 +93,28 @@ public class main {
 			}
 			case 3 :
 			{
+				System.out.println("-------------------------------\n\n");
 				System.out.println(company.showIncomeCostProfit(stations, numberOfStations));
 				break;
 			}
 			case 4 :
 			{
-				System.out.println(company.minMaxIncome(stations)); //  *enAzFazlaGelir
+				System.out.println("-------------------------------\n\n");
+				System.out.println(company.minMaxIncome(stations)); 
 				break;
 			}
 			case 5:
 			{
+				System.out.println("-------------------------------\n\n");
 				System.out.println( company.closeLowestProfitableStation(stations) );
 				break;
 			}
 			case 6 :
 			{
-				System.out.println("Enter stations to compare\n1. "); 
+				System.out.println("-------------------------------\n\n"
+						+ "Enter stations to compare\nFirst Station Name: "); 
 				a = scan.next();
-				System.out.println("2. ");
+				System.out.println("Second Station Name: ");
 				b = scan.next();
 				System.out.println(company.compare(stations, a, b));
 				break;
@@ -129,7 +138,7 @@ public class main {
 		selection = scan.nextInt();
 		} // end of while
 		
-		System.out.println("Exit successfully!");
+		System.out.println("###########################\n\nExit successfully!");
 		
 
 	}
